@@ -46,7 +46,7 @@ The project was implemented using the following technologies and libraries:
 ## Deploy site information (Netlify)
 
 `Site name` - **cloud-instagram-link**
- Live: [https://cloud-insta-link.netlify.app/](https://cloud-insta-link.netlify.app/) 
+ Live: [https://cloud-insta-link.netlify.app/](https://cloud-insta-link.netlify.app/) <br>
 `Deploy status badge` - [![Netlify Status](https://api.netlify.com/api/v1/badges/c04ea29c-fe4e-4a2e-bd22-f2e16f79705c/deploy-status)](https://app.netlify.com/sites/instagram-header-link/deploys)
 
 ## Screenshots
