@@ -1,0 +1,21 @@
+{
+  "title": {
+    "firstPart": "Hello,",
+    "secondPart": "my name is Nicolas"
+  },
+  "subtitle": {
+    "firstPart": "In the past, I was a tea master 🍵,",
+    "secondPart": "I was a globe trotter, i mostly traveled in Japan 🌏,",
+    "thirthPart": "I founded a family 👨‍👩‍👦‍👦,",
+    "fourthPart": "and now, I switcher to engineer and I'm a fullstack developer.🧑‍💻"
+  },
+  "subsubtitle": "Next links:",
+  "comment": "* all elements are clickable",
+  "contact": {
+    "description": "You can contact me in any way convenient for you:",
+    "comment": "* all elements are clickable as well"
+  },
+  "open": "Open",
+  "close": "Close",
+  "scroll": "SCROLL DOWN"
+}

@@ -1,0 +1,21 @@
+{
+  "title": {
+    "firstPart": "こんにちは,",
+    "secondPart": "ニコラと申します"
+  },
+  "subtitle": {
+    "firstPart": " 昔は、俺はお茶の達人だったのですが🍵",
+    "secondPart": "俺は世界中を旅していて、主に日本を旅行していました 🌏、",
+    "thirthPart": "俺は家族を作りました👨‍👩‍👦‍👦、",
+    "fourthPart": "そして今はエンジニアに転向し、full stack developerです🧑‍💻。"
+  },
+  "subsubtitle": "次の link",
+  "comment": "* すべての要素をクリック可能です",
+  "contact": {
+    "description": "ご都合のよい方法で私にご連絡ください:",
+    "comment": "* すべての要素をクリック可能です"
+  },
+  "open": "開ける",
+  "close": "閉める",
+  "scroll": "下にスクロール"
+}

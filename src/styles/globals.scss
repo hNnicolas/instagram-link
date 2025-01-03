@@ -1,0 +1,549 @@
+@use "./mixins/" as *;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  color: var(--color--black);
+  font-weight: normal;
+  font-size: 16px;
+  line-height: var(--line-height--primary);
+  font-family: var(--font-family--primary);
+  letter-spacing: var(--letter-spacing--primary);
+  background-color: var(--color--white);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+  color: var(--color--black);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  color: var(--color--black);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border: none;
+  outline: none;
+  color: var(--color--black);
+  cursor: pointer;
+  background: none;
+}
+
+img {
+  display: block;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 16px;
+  text-align: center;
+
+  @include useScreen("mobile-md") {
+    max-width: 440px;
+    padding: 20px 30px;
+  }
+
+  @include useScreen("mobile-xl") {
+    max-width: 640px;
+    padding: 20px 50px;
+  }
+}
+
+.content {
+  z-index: 12;
+  position: absolute;
+  top: 900px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-bottom: 300px;
+}
+
+.title {
+  padding-bottom: 30px;
+  font-weight: 900;
+  font-size: 22px;
+}
+
+.subtitle {
+  padding-bottom: 20px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.subsubtitle {
+  padding-bottom: 7px;
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.description {
+  color: var(--color--black);
+  font-weight: 300;
+  font-size: 16px;
+
+  @include useOnHover {
+    text-shadow: 2px 2px var(--color--lavender);
+    transition: var(--transition--2);
+  }
+
+  @include useOnClick {
+    text-shadow: 1px 1px var(--color--grey);
+    transition: var(--transition--2);
+  }
+}
+
+.comment {
+  padding-bottom: 35px;
+  color: var(--color--black);
+  font-weight: 200;
+  font-size: 10px;
+}
+
+.sections {
+  gap: 50px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0;
+}
+
+.list {
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item {
+  width: 100%;
+  height: 100%;
+  padding: 10px 20px;
+  border-radius: 10px;
+  overflow-x: clip;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.max-width {
+  max-width: 380px;
+}
+
+.block {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon-and-text {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.icon-and-contact {
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+}
+
+.hover-transition-opacity {
+  @include useOnHover {
+    opacity: 0.7;
+    transition: var(--transition--2);
+  }
+}
+
+.click-transition-opacity {
+  @include useOnClick {
+    opacity: 0.5;
+    transition: var(--transition--2);
+  }
+}
+
+.svg {
+  @extend .hover-transition-opacity;
+  @extend .click-transition-opacity;
+}
+
+.open-button {
+  gap: 7px;
+  padding-bottom: 10px;
+
+  p {
+    color: var(--color--black);
+  }
+
+  @include useOnHover {
+    p {
+      color: var(--color--dark-blue);
+      transition: var(--transition--1);
+    }
+
+    img {
+      opacity: 0.5;
+      transition: var(--transition--1);
+    }
+  }
+
+  @include useOnClick {
+    p {
+      color: var(--color--blue);
+      transition: var(--transition--1);
+    }
+
+    img {
+      opacity: 0.3;
+      transition: var(--transition--1);
+    }
+  }
+}
+
+.overlay {
+  display: flex;
+  z-index: 1200;
+  position: fixed;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+  z-index: 1600;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90vw;
+  border-radius: 3px;
+  border: 1px solid var(--color--dark-blue);
+  width: fit-content;
+  max-width: 100vw;
+  max-height: calc(100vh - 32px);
+  padding: 40px 10px 20px;
+  border-radius: 8px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  color: var(--color--white);
+  background-color: var(--color--blue);
+  transform: translate(-50%, -50%);
+}
+
+.buttons-container {
+  display: flex;
+  z-index: 1601;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  justify-content: space-between;
+  width: calc(100% - 22px);
+  padding: 0;
+}
+
+.button-text {
+  @extend .hover-transition-opacity;
+  @extend .click-transition-opacity;
+
+  color: var(--color--white);
+
+  @include useOnHover {
+    color: var(--color--dark-blue);
+    transition: var(--transition--2);
+  }
+
+  @include useOnClick {
+    color: var(--color--dark-slate-blue);
+    transition: var(--transition--2);
+  }
+}
+
+.button-close {
+  width: 20px;
+  height: 20px;
+
+  @include useOnHover {
+    opacity: 0.5;
+    transition: var(--transition--2);
+  }
+
+  @include useOnClick {
+    opacity: 0.8;
+    transition: var(--transition--2);
+  }
+}
+
+.content-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-image {
+  width: 100%;
+  min-width: 270px;
+  height: auto;
+}
+
+.content-link {
+  width: 100%;
+  min-width: 270px;
+  height: auto;
+
+  @include useScreen("tablet-sm") {
+    width: 50%;
+    padding: 10px;
+  }
+
+  @include useOnHover {
+    div img {
+      border: 1px solid var(--color--dark-blue);
+      transition: var(--transition--3);
+    }
+  }
+
+  @include useOnClick {
+    div img {
+      border: 1px solid var(--color--dark-slate-blue);
+      transition: var(--transition--3);
+    }
+  }
+}
+
+.layer {
+  position: fixed;
+  width: 100%;
+  height: max-content;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: auto;
+}
+
+.mountains,
+.clouds {
+  width: 100%;
+  height: 100%;
+}
+
+.mountains {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+
+  p {
+    color: var(--color--white);
+    text-transform: uppercase;
+    font-size: 20px;
+    z-index: 15;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .layer {
+    z-index: 11;
+    min-height: 800px;
+  }
+
+  .layer-1 {
+    background-image: url("https://res.cloudinary.com/hnicolas86/image/upload/v1735837257/sky_mgwjqq.jpg");
+    background-position: left top;
+    background-size: cover;
+  }
+
+  .layer-2 {
+    background-image: url("https://res.cloudinary.com/hnicolas86/image/upload/v1735837472/mountBg_siic1v.webp");
+
+    @media screen and (min-width: 1190px) {
+      background: none;
+    }
+  }
+
+  .layer-3 {
+    background-image: url("https://res.cloudinary.com/hnicolas86/image/upload/v1735837518/cloud2_yqn8c4.webp");
+    top: -50%;
+    background-size: cover;
+  }
+
+  .layer-4 {
+    background-image: url("https://res.cloudinary.com/hnicolas86/image/upload/v1735837560/mountFg_unp0iv.webp");
+    background-position: right top;
+  }
+
+  .layer-overlay {
+    background-image: url("https://res.cloudinary.com/hnicolas86/image/upload/v1735837605/cloud1_pllz5x.png");
+    background-size: cover;
+  }
+
+  .layer-5 {
+    background-image: url("https://res.cloudinary.com/hnicolas86/image/upload/v1735837636/mountMg_itzcey.webp");
+    background-position: left top;
+  }
+
+  .layer-6 {
+    background-image: url("https://res.cloudinary.com/hnicolas86/image/upload/v1735837668/cloud3_wx2dbv.png");
+    background-size: cover;
+  }
+}
+
+.clouds {
+  position: fixed;
+  top: 900px;
+
+  .layer {
+    z-index: 10;
+    min-height: 800px;
+
+    @include useScreen("desktop-lg") {
+      background-size: contain;
+    }
+  }
+
+  .layer-1 {
+    background-image: url("https://res.cloudinary.com/hnicolas86/image/upload/v1735837397/cloud_xnj8fr.png");
+    top: 180%;
+
+    @include useScreen("mobile-lg") {
+      left: 7%;
+    }
+
+    @include useScreen("desktop-lg") {
+      top: 120%;
+    }
+  }
+
+  .layer-2 {
+    background-image: url("https://res.cloudinary.com/hnicolas86/image/upload/v1735837397/cloud_xnj8fr.png");
+    top: 90%;
+
+    @include useScreen("mobile-lg") {
+      right: -45%;
+    }
+
+    @include useScreen("desktop-lg") {
+      top: 80%;
+    }
+  }
+
+  .layer-3 {
+    background-image: url("https://res.cloudinary.com/hnicolas86/image/upload/v1735837397/cloud_xnj8fr.png");
+    top: 170%;
+
+    @include useScreen("mobile-lg") {
+      left: -30%;
+    }
+
+    @include useScreen("desktop-lg") {
+      top: 110%;
+    }
+  }
+
+  .layer-4 {
+    background-image: url("https://res.cloudinary.com/hnicolas86/image/upload/v1735837397/cloud_xnj8fr.png");
+    top: 270%;
+
+    @include useScreen("mobile-lg") {
+      left: -30%;
+    }
+  }
+}
+
+.lang {
+  &-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 100;
+    background: var(--color--dark-blue);
+    border-radius: 30px;
+    padding: 10px;
+
+    @include useScreen("mobile-lg") {
+      top: 20px;
+      right: 10px;
+    }
+
+    .first-item {
+      position: relative;
+      padding-right: 12px;
+
+      &::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 1px;
+        background: var(--color--white);
+      }
+    }
+  }
+
+  &-button {
+    z-index: 100;
+    color: var(--color--blue);
+
+    @include useOnHover {
+      color: var(--color--grey);
+      transition: var(--transition--2);
+    }
+
+    @include useOnClick {
+      color: var(--color--black);
+      transition: var(--transition--2);
+    }
+  }
+}
+
+.text {
+  &-white {
+    color: var(--color--white);
+
+    &-blue {
+      color: var(--color--dark-blue);
+    }
+  }
+}
