@@ -67,14 +67,17 @@ export const linksUA: LinkItemType[] = [
     ],
   },
   {
-    title: "Instagram (Enjoy Stretch Studio)",
+    title: "Instagram",
     textArrow: "プロフィールを開く",
-    link: "https://www.instagram.com/hnicolas_dev",
+    link: "https://www.instagram.com/hfnicolas_/",
     description: "IGで俺のプロジェクトを見つけてください",
     svgName: "instagram",
     svgAlt: "instagram-svg",
     screenshots: [
-      { imgName: "instagram", imgAlt: "instagram-screenshot-first" },
+      { imgName: "instagram-1", imgAlt: "instagram-screenshot-first" },
+      { imgName: "instagram-2", imgAlt: "instagram-screenshot-second" },
+      { imgName: "instagram-3", imgAlt: "instagram-screenshot-third" },
+      { imgName: "instagram-4", imgAlt: "instagram-screenshot-fourth" },
     ],
   },
   {
@@ -189,12 +192,15 @@ export const linksEN: LinkItemType[] = [
   {
     title: "Instagram",
     textArrow: "account",
-    link: "https://www.instagram.com/hnicolas_dev",
+    link: "https://www.instagram.com/hfnicolas_/",
     description: "discover my project on IG",
     svgName: "instagram",
     svgAlt: "instagram-svg",
     screenshots: [
-      { imgName: "instagram", imgAlt: "instagram-screenshot-first" },
+      { imgName: "instagram-1", imgAlt: "instagram-screenshot-first" },
+      { imgName: "instagram-2", imgAlt: "instagram-screenshot-second" },
+      { imgName: "instagram-3", imgAlt: "instagram-screenshot-third" },
+      { imgName: "instagram-4", imgAlt: "instagram-screenshot-fourth" },
     ],
   },
   {
