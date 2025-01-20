@@ -104,7 +104,7 @@ export const linksUA: LinkItemType[] = [
     svgAlt: "cv-svg",
     screenshots: [
       {
-        imgName: "cv",
+        imgName: "CV_Nicolas_English",
         imgAlt: "cv-photo",
       },
     ],
@@ -227,7 +227,7 @@ export const linksEN: LinkItemType[] = [
     svgAlt: "cv-svg",
     screenshots: [
       {
-        imgName: "cv",
+        imgName: "CV_Nicolas_HUANG",
         imgAlt: "cv-photo",
       },
     ],
