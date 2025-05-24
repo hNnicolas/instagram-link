@@ -98,7 +98,7 @@ export const linksUA: LinkItemType[] = [
   {
     title: "履歴書を閉じる",
     textArrow: "履歴書を開く",
-    link: "https://drive.google.com/file/d/1awqm0ZNciyN0XGuKHsEgwFr5nD6jJ0bf/view?usp=sharing",
+    link: "https://drive.google.com/file/d/1ZKkQIaIB5kIb2YaBNvaMLhAgk2PR8Xok/view?usp=sharing",
     description: "俺の履歴書への直接link",
     svgName: "cv",
     svgAlt: "cv-svg",
@@ -112,8 +112,8 @@ export const linksUA: LinkItemType[] = [
   {
     title: "Portfolio",
     textArrow: "website",
-    link: "https://nicolas-huang-portfolio.netlify.app/",
-    description: "React Fiber と three.js を使用した私のシンプルな 3D ポートフォリオ",
+    link: "https://nicolashuang.netlify.app/",
+    description: "私のポートフォリオ",
     svgName: "portfolio",
     svgAlt: "portfolio-svg",
     screenshots: [
@@ -235,8 +235,8 @@ export const linksEN: LinkItemType[] = [
   {
     title: "Portfolio",
     textArrow: "website",
-    link: "https://nicolas-huang-portfolio.netlify.app/",
-    description: "My simple 3D portfolio with react fiber and three.js",
+    link: "https://nicolashuang.netlify.app/",
+    description: "My portfolio",
     svgName: "portfolio",
     svgAlt: "portfolio-svg",
     screenshots: [
